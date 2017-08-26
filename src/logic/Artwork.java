@@ -2,7 +2,7 @@ package logic;
 
 import java.util.Arrays;
 
-public class Artwork {
+public class ArtWork {
 //START CODE HERE
 	private String name;
 	private Artist[] artist;
@@ -11,7 +11,7 @@ public class Artwork {
 	private String id;
 	private int price;
 	
-	public Artwork(String name, Artist[] artist, String medium, int year, String id, int price) {
+	public ArtWork(String name, Artist[] artist, String medium, int year, String id, int price) {
 		this.name = name;
 		this.artist = artist;
 		this.medium = medium;
@@ -42,7 +42,16 @@ public class Artwork {
 		return id;
 	}
 	
-
+	//@Override;
+	public String toString() {
+		String out;
+		out = "ArtWork [name=" + name;
+		out += ", artists=" + Arrays.toString(artist);
+		out += ", medium=" + medium;
+		out += ", year=" + year + ", id=" + id;
+		out += ", price=" + price;
+		return out;
+	}
 //END CODE HERE
 //Hint: use Arrays.toString to print array	
 }
