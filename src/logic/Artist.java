@@ -9,6 +9,7 @@ public class Artist {
 	private String email;
 	private char gender;
 	private Date dob;
+	final private SimpleDateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy");
 	
 	public Artist(String name, String email, char gender, Date dob) {
 		this.name = name;
@@ -32,8 +33,16 @@ public class Artist {
 	public Date getDob() {
 		return dob;
 	}
-
-
+	
+	//@Override
+	public String toString() {
+		String out;
+		out = "Artist [name=" + name;
+		out += ", email=" + email;
+		out += ", gender=" + gender;
+		out += ", dob=" + dateFormat.format(dob);
+		return out;
+	}
 // END CODE HERE
 //Hint:dateFormat.format(.....) to print date in the required format
 }
