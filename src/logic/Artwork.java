@@ -5,15 +5,15 @@ import java.util.Arrays;
 public class ArtWork {
 //START CODE HERE
 	private String name;
-	private Artist[] artist;
+	private Artist[] artists;
 	private String medium;
 	private int year;
 	private String id;
 	private int price;
 	
-	public ArtWork(String name, Artist[] artist, String medium, int year, String id, int price) {
+	public ArtWork(String name, Artist[] artists, String medium, int year, String id, int price) {
 		this.name = name;
-		this.artist = artist;
+		this.artists = artists;
 		this.medium = medium;
 		this.year = year;
 		this.id = id;
@@ -30,7 +30,7 @@ public class ArtWork {
 		return name;
 	}
 	public Artist[] getArtist() {
-		return artist;
+		return artists;
 	}
 	public String getMedium() {
 		return medium;
@@ -46,7 +46,7 @@ public class ArtWork {
 	public String toString() {
 		String out;
 		out = "ArtWork [name=" + name;
-		out += ", artists=" + Arrays.toString(artist);
+		out += ", artists=" + Arrays.toString(artists);
 		out += ", medium=" + medium;
 		out += ", year=" + year + ", id=" + id;
 		out += ", price=" + price;
