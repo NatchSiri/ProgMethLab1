@@ -6,18 +6,23 @@ import java.util.Arrays;
 
 public class Exhibition {
         //START CODE HERE
-	//final int MAX_ART_WORK;
+	final int MAX_ART_WORK = 10;
 	String name;
-	Artwork[] artwork;
+	ArtWork[] artworks = new ArtWork[MAX_ART_WORK];
 	int numArtWorks;
 	
 	public Exhibition(String name) {
 		this.name = name;
 	}
 
-	public void addArtWork(Artwork artwork) {
+	public void addArtWork(ArtWork artwork) {
 		numArtWorks++;
-		artwork[numArtWorks] = artwork;
+		if (numArtWorks > MAX_ART_WORK) {
+			System.out.println("ArtWork cannot add more");
+		} else {
+			this.artworks[numArtWorks] = artwork;
+		}
+		
 	}
 	public String getName() {
 		return name;
@@ -29,6 +34,12 @@ public class Exhibition {
 		return numArtWorks;
 	}
 	
+	public String toString() {
+		String out;
+		out = "Exhibition [name=" + name;
+		out += ", artworks=" + Arrays.toString(artworks);
+		return out;
+	}
        //END CODE HERE
 	public static void main(String[] args) throws ParseException {
 
